@@ -1,0 +1,17 @@
+# Python gereksizleri
+__pycache__/
+*.pyc
+
+# Jupyter Notebook çöpleri
+.ipynb_checkpoints
+.jupyter
+*/.ipynb_checkpoints/*
+
+# Sanal ortamlar (varsa)
+env/
+venv/
+.env
+
+# İsteğe bağlı: Veri seti çok büyükse GitHub kabul etmez (100MB+)
+# Senin dosyan küçük (240KB), o yüzden yükleyebilirsin.
+# data/
