@@ -39,7 +39,9 @@ Daily Return: Günlük yüzde değişim oranları.
 
 Volatilite Analizi: Tahminlerin gerçekçiliğini artırmak için son 30 günün standart sapma verisi kullanılır.
 
+
 🛠️ Kurulum ve Kullanım
+```text
 1. Depoyu Klonlayın
 
 git clone [https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git](https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git)
