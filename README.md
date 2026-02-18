@@ -1,110 +1,56 @@
-\# 📈 NVIDIA AI Forecaster: Stock Price Prediction
+# 📈 NVIDIA AI Forecaster: Stock Price Prediction
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask" />
+  <img src="https://img.shields.io/badge/XGBoost-EE4C2C?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost" />
+  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Sklearn" />
+</p>
 
+## 🌟 Proje Hakkında
 
-!\[Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge\&logo=python)
+**NVIDIA AI Forecaster**, NVIDIA (NVDA) hisse senedi fiyatlarını analiz eden ve **XGBoost** algoritması kullanarak gelecek projeksiyonları sunan bir web uygulamasıdır. Bu proje, ham borsa verilerini anlamlı özelliklere dönüştürerek (feature engineering) **Recursive Forecasting** ve **Monte Carlo** simülasyonu teknikleriyle birleştirir.
 
-!\[Framework](https://img.shields.io/badge/Flask-Web%20App-green?style=for-the-badge\&logo=flask)
+## ✨ Öne Çıkan Özellikler
 
-!\[ML](https://img.shields.io/badge/XGBoost-Forecasting-orange?style=for-the-badge\&logo=xgboost)
+- **🤖 Akıllı Tahmin Motoru:** XGBoost Regressor ile yüksek doğruluklu fiyat projeksiyonu.
+- **🔄 Dinamik Zaman Analizi:** 1 Hafta, 1 Ay, 3 Ay ve 1 Yıllık esnek tahmin seçenekleri.
+- **📊 Gelişmiş Görselleştirme:** Chart.js ile hem geçmiş trendleri hem de AI tahminlerini birleştiren interaktif grafikler.
+- **🎲 Gerçekçi Simülasyon:** Tahminlere piyasa gürültüsü (noise) eklenerek daha doğal borsa hareketleri üretilir.
+- **📱 Modern UI:** Dark mode temalı, kullanıcı dostu ve tepkisel (responsive) dashboard tasarımı.
 
-!\[License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
-
-
-
-\## 🌟 Proje Hakkında
-
-
-
-\*\*NVIDIA AI Forecaster\*\*, finansal zaman serisi analizi yaparak NVIDIA (NVDA) hisse senedi fiyatlarını tahmin eden, makine öğrenmesi tabanlı bir web uygulamasıdır. 
-
-
-
-Bu proje, sadece basit bir regresyon yapmak yerine, \*\*Recursive Forecasting (Özyinelemeli Tahmin)\*\* ve \*\*Monte Carlo Simülasyonu\*\* tekniklerini birleştirerek piyasa volatilitesini (oynaklığını) simüle eder. Kullanıcıya interaktif bir dashboard üzerinden 1 haftalık, 1 aylık veya 1 yıllık gelecek projeksiyonları sunar.
-
-
-
-\## ✨ Temel Özellikler
-
-
-
-\- \*\*🤖 Gelişmiş ML Modeli:\*\* XGBoost algoritması ile eğitilmiş yüksek doğruluklu tahmin motoru.
-
-\- \*\*🔄 Recursive Forecasting:\*\* Model, kendi tahminlerini girdi olarak kullanarak geleceği zincirleme tahmin eder.
-
-\- \*\*📊 Dinamik Volatilite:\*\* Piyasa gürültüsünü (Noise) simüle ederek dümdüz çizgiler yerine gerçekçi, dalgalı fiyat hareketleri üretir.
-
-\- \*\*Time Travel UI:\*\* - \*\*Kısa Vade:\*\* Son 6 aylık veriyi ve yakın geleceği gösterir.
-
-&nbsp; - \*\*Uzun Vade:\*\* 2016'dan bugüne tüm tarihçeyi ve yıllık projeksiyonu gösterir.
-
-\- \*\*⚡ Modern Dashboard:\*\* Flask altyapısı ve Chart.js ile güçlendirilmiş, Dark Mode destekli tepkisel arayüz.
-
-
-
-\## 🧠 Teknik Mimari
-
-
-
-Proje üç ana katmandan oluşur:
-
-
-
-1\.  \*\*Veri İşleme (Data Pipeline):\*\*
-
-&nbsp;   - `pandas` ile zaman serisi manipülasyonu.
-
-&nbsp;   - Feature Engineering: SMA\_10, SMA\_50 (Hareketli Ortalamalar) ve Daily Return (Günlük Getiri) hesaplamaları.
-
-2\.  \*\*Model (Machine Learning):\*\*
-
-&nbsp;   - \*\*Algoritma:\*\* XGBoost Regressor
-
-&nbsp;   - \*\*Eğitim:\*\* 2016-2026 verileriyle eğitim (%80 Train - %20 Test split).
-
-&nbsp;   - \*\*Metrik:\*\* R2 Score ve RMSE optimize edilmiştir.
-
-3\.  \*\*Web Arayüzü (Frontend/Backend):\*\*
-
-&nbsp;   - \*\*Backend:\*\* Flask (Python) API.
-
-&nbsp;   - \*\*Frontend:\*\* HTML5, CSS3 (Bootstrap), JavaScript (Chart.js).
-
-
-
-\## 📂 Proje Yapısı
-
-
+## 📂 Proje Yapısı
 
 ```text
-
 NVIDIA-AI-Forecaster/
+├── app.py                 # Flask Sunucusu ve Tahmin Algoritması
+├── requirements.txt       # Gerekli Kütüphaneler Listesi
+├── data/                  # Güncel NVIDIA Borsa Verileri (CSV)
+├── models/                # Eğitilmiş Model ve Scaler Dosyaları
+├── templates/             # HTML ve JavaScript Arayüz Dosyaları
+└── model_training.ipynb   # Model Eğitim Süreci ve Analizler
 
-│
+🧠 Teknik Detaylar
+Model eğitimi sırasında aşağıdaki özellik mühendisliği (Feature Engineering) adımları uygulanmıştır:
 
-├── app.py                 # Flask Ana Uygulama Dosyası
+SMA (Simple Moving Average): 10 ve 50 günlük hareketli ortalamalar.
 
-├── requirements.txt       # Gerekli Kütüphaneler
+Daily Return: Günlük yüzde değişim oranları.
 
-├── README.md              # Proje Dokümantasyonu
+Volatilite Analizi: Tahminlerin gerçekçiliğini artırmak için son 30 günün standart sapma verisi kullanılır.
 
-│
+🛠️ Kurulum ve Kullanım
+1. Depoyu Klonlayın
+Bash
 
-├── models/                # Eğitilmiş Model Dosyaları
+git clone [https://github.com/KULLANICI_ADINIZ/NVIDIA-AI-Forecaster.git](https://github.com/KULLANICI_ADINIZ/NVIDIA-AI-Forecaster.git)
+cd NVIDIA-AI-Forecaster
+2. Gereksinimleri Yükleyin
+Bash
 
-│   ├── nvidia\_xgb\_model.pkl
+pip install -r requirements.txt
+3. Uygulamayı Başlatın
+Bash
 
-│   └── nvidia\_scaler.pkl
-
-│
-
-├── data/                  # Veri Setleri
-
-│   └── NVIDIA\_Stock\_Prices.csv
-
-│
-
-└── templates/             # Web Arayüzü (Frontend)
-
-&nbsp;   └── index.html
-
+python app.py
+Tarayıcınızda http://127.0.0.1:5000 adresine giderek uygulamayı kullanmaya başlayabilirsiniz.
