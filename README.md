@@ -18,7 +18,7 @@
 - **📊 Gelişmiş Görselleştirme:** Chart.js ile hem geçmiş trendleri hem de AI tahminlerini birleştiren interaktif grafikler.
 - **🎲 Gerçekçi Simülasyon:** Tahminlere piyasa gürültüsü (noise) eklenerek daha doğal borsa hareketleri üretilir.
 - **📱 Modern UI:** Dark mode temalı, kullanıcı dostu ve tepkisel (responsive) dashboard tasarımı.
-
+```text
 ## 📂 Proje Yapısı
 
 
@@ -41,7 +41,7 @@ Volatilite Analizi: Tahminlerin gerçekçiliğini artırmak için son 30 günün
 
 
 🛠️ Kurulum ve Kullanım
-```text
+
 1. Depoyu Klonlayın
 
 git clone [https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git](https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git)
