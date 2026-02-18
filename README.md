@@ -21,7 +21,7 @@
 
 ## 📂 Proje Yapısı
 
-```text
+
 NVIDIA-AI-Forecaster/
 ├── app.py                 # Flask Sunucusu ve Tahmin Algoritması
 ├── requirements.txt       # Gerekli Kütüphaneler Listesi
@@ -41,18 +41,19 @@ Volatilite Analizi: Tahminlerin gerçekçiliğini artırmak için son 30 günün
 
 🛠️ Kurulum ve Kullanım
 1. Depoyu Klonlayın
-Bash
 
-git clone [https://github.com/KULLANICI_ADINIZ/NVIDIA-AI-Forecaster.git](https://github.com/KULLANICI_ADINIZ/NVIDIA-AI-Forecaster.git)
+git clone [https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git](https://github.com/yigiterenalp/NVIDIA-AI-Forecaster.git)
+
 cd NVIDIA-AI-Forecaster
+
 2. Gereksinimleri Yükleyin
-Bash
 
 pip install -r requirements.txt
+
 3. Uygulamayı Başlatın
-Bash
 
 python app.py
+
 Tarayıcınızda http://127.0.0.1:5000 adresine giderek uygulamayı kullanmaya başlayabilirsiniz.
 
 📝 Lisans
